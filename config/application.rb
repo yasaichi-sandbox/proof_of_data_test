@@ -25,7 +25,13 @@ module ProofOfDataTest
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
-    # Don't generate system test files.
-    config.generators.system_tests = nil
+    config.generators do |g|
+      g.assets false
+      g.helper false
+      g.controller_specs false
+      g.helper_specs false
+      g.request_specs false
+      g.view_specs false
+    end
   end
 end
