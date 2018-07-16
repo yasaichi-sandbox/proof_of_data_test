@@ -4,7 +4,7 @@
   <%= field_set_tag nil, class: "form-group" do %>
     <%= f.email_field :email,
       class: "form-control form-control-lg",
-      "data-test": "email",
+      "data-testid": "email",
       placeholder: "Email"
     %>
   <% end %>
@@ -12,14 +12,14 @@
   <%= field_set_tag nil, class: "form-group" do %>
     <%= f.password_field :password,
       class: "form-control form-control-lg",
-      "data-test": "password",
+      "data-testid": "password",
       placeholder: "Password"
     %>
   <% end %>
 
   <%= f.button "Sign in",
     class: "btn btn-lg btn-primary",
-    "data-test": "submit",
+    "data-testid": "submit",
     type: "submit"
   %>
 <% end %>

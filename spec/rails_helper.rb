@@ -26,8 +26,8 @@ require 'rspec/rails'
 # If you are not using ActiveRecord, you can remove this line.
 ActiveRecord::Migration.maintain_test_schema!
 
-Capybara.add_selector(:data_test) do
-  css { |val| %Q([data-test="#{val}"]) }
+Capybara.add_selector(:test_id) do
+  css { |id| %Q([data-testid="#{id}"]) }
 end
 
 RSpec.configure do |config|

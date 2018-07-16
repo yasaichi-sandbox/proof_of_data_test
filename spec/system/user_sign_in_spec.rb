@@ -15,10 +15,10 @@ RSpec.describe "User sign in", type: :system do
     expect(page).to have_current_path(root_path)
   end
 
-  it "should allow users to sign in with their email and password (with `data-test`)" do
-    find(:data_test, "email").set(user.email)
-    find(:data_test, "password").set(user.password)
-    find(:data_test, "submit").click
+  it "should allow users to sign in with their email and password (with `data-testid`)" do
+    find(:test_id, "email").set(user.email)
+    find(:test_id, "password").set(user.password)
+    find(:test_id, "submit").click
 
     expect(page).to have_current_path(root_path)
   end
