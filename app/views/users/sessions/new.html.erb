@@ -1,6 +1,6 @@
 <h2>Sign in</h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<%= form_with(model: resource, url: session_path(resource_name)) do |f| %>
   <%= field_set_tag nil, class: "form-group" do %>
     <%= f.email_field :email,
       class: "form-control form-control-lg",
@@ -17,11 +17,7 @@
     %>
   <% end %>
 
-  <%= f.button "Sign in",
-    class: "btn btn-lg btn-primary",
-    "data-testid": "submit",
-    type: "submit"
-  %>
+  <%= f.submit "Sign in", class: "btn btn-lg btn-primary", "data-testid": "submit" %>
 <% end %>
 
 <%= render "users/shared/links" %>
